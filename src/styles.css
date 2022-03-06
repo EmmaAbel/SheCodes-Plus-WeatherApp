@@ -1,0 +1,91 @@
+body {
+  background-image: url("images/SunClouds.jpg");
+  font-family: "Catamaran", sans-serif;
+}
+.weatherCard {
+  border-radius: 30px;
+}
+#inputCity {
+  background-color: rgba(240, 234, 214, 0.1);
+  color: #212529;
+  border-color: #212529;
+}
+.search {
+  background-color: rgba(240, 234, 214, 0.2);
+  line-height: 1;
+}
+.timeDate {
+  padding: 20px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  font-size: 12px;
+}
+
+.city {
+  font-size: 38px;
+  font-weight: 700;
+}
+.temperature {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.feelsWind {
+  font-size: 12px;
+}
+.weatherGraph {
+  display: block;
+  opacity: 0.85;
+  width: 100%;
+  margin: 0 auto;
+  object-fit: scale-down;
+}
+.prognosis {
+  font-size: 30px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.card-header {
+  padding: 0 auto;
+}
+.future {
+  background-color: rgba(240, 234, 214, 0.1);
+}
+
+.futureDay {
+  font-size: 15px;
+  text-align: center;
+  transition: all 200ms ease-in-out;
+}
+
+.futureTemps {
+  text-align: center;
+}
+.weatherQuote {
+  font-size: 12px;
+  font-family: "Hachi Maru Pop", cursive;
+}
+.myself {
+  font-family: "Hachi Maru Pop", cursive;
+  text-align: center;
+  font-size: 10px;
+  position: static;
+  bottom: 0;
+  padding-top: 30px;
+}
+.myPic {
+  width: 5%;
+}
+.future:hover {
+  background-color: rgba(240, 236, 226, 0.5);
+  transform: scale(1.2);
+}
+.myPic:hover {
+  transform: scale(1.5);
+}
+.search:hover {
+  background-color: rgba(240, 236, 226, 0.5);
+  color: #212529;
+}

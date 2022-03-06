@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SheCodes Plus</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Hachi+Maru+Pop&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/3b7ce627a5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <style>
+      body {
+        background-image: url("images/SunClouds.jpg");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-holder pt-5">
+        <div class="card bg-light p-2 weatherCard" style="--bs-bg-opacity: 0.3">
+          <div class="card-body">
+            <form class="row justify-content-start" id="searchbar">
+              <div class="col-2">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputCity"
+                  placeholder="Enter a city"
+                />
+              </div>
+              <div class="col">
+                <input
+                  type="submit"
+                  class="btn btn-outline-dark rounded-pill search"
+                  value="search"
+                />
+              </div>
+              <div class="col">
+                <input
+                  type="submit"
+                  class="btn btn-outline-dark rounded-pill search"
+                  id="currentCity"
+                  value="current location"
+                />
+              </div>
+            </form>
+            <p class="timeDate">
+              Last updated today Sunday 16th of Janurary 2022 at 16:55
+            </p>
+            <div class="row justify-content-start mb-0">
+              <div class="col-3 mb-0 pe-0"><h1 class="city">Viborg</h1></div>
+              <div class="col-3 mb-0 px-0">
+                <h2 class="temperature"></h2>
+                <span class="units"> °C </span>
+                <i class="fas fa-cloud-sun"></i>
+                <div class="col">
+                  <p>
+                    <span class="feelsTemp">Feels like 13 °C</span>
+                    <br />
+                    <span class="wind">Wind 0 m/s</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <img
+              src="images/Vejrgraf.JPG"
+              alt="Weather graph"
+              class="weatherGraph"
+            />
+            <h4 class="prognosis">5 days prognosis</h4>
+            <div class="row align-items-center">
+              <div class="col-sm">
+                <div class="card border-dark future">
+                  <div class="card-header p-0">
+                    <h5 class="card-title futureDay mt-2">Tomorrow</h5>
+                  </div>
+                  <div class="card-body p-0">
+                    <p class="card-text futureTemps">
+                      15 °C / 7 °C
+                      <br />
+                      <i class="fas fa-cloud"></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="card border-dark future">
+                  <div class="card-header p-0">
+                    <h5 class="card-title futureDay mt-2">Tuesday</h5>
+                  </div>
+                  <div class="card-body p-0">
+                    <p class="card-text futureTemps">
+                      12 °C / 5 °C
+                      <br />
+                      <i class="fas fa-cloud-sun-rain"></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="card border-dark future">
+                  <div class="card-header p-0">
+                    <h5 class="card-title futureDay mt-2">Wednesday</h5>
+                  </div>
+                  <div class="card-body p-0">
+                    <p class="card-text futureTemps">
+                      10 °C / 5 °C
+                      <br />
+                      <i class="fas fa-cloud-showers-heavy"></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="card border-dark future">
+                  <div class="card-header p-0">
+                    <h5 class="card-title futureDay mt-2">Thursday</h5>
+                  </div>
+                  <div class="card-body p-0">
+                    <p class="card-text futureTemps">
+                      13 °C / 7 °C
+                      <br />
+                      <i class="fas fa-cloud-showers-heavy"></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="card border-dark future">
+                  <div class="card-header p-0">
+                    <h5 class="card-title futureDay mt-2">Friday</h5>
+                  </div>
+                  <div class="card-body p-0">
+                    <p class="card-text futureTemps">
+                      17 °C / 7 °C
+                      <br />
+                      <i class="fas fa-sun"></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="weatherQuote">
+        Remember there is no such thing as poor weather - just unsuitable
+        clothing, so stay tuned here for more weather updates.
+      </footer>
+      <div class="myself">
+        Coded by Emma Abel Bitsch
+        <img
+          src="images/profilbillede.jpg"
+          class="rounded-circle myPic"
+          alt="Picture of Emma"
+        />
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
